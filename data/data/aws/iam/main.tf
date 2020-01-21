@@ -19,7 +19,7 @@ resource "aws_iam_role" "worker_role" {
         {
             "Action": "sts:AssumeRole",
             "Principal": {
-                "Service": "ec2.amazonaws.com"
+                "Service": "ec2.amazonaws.com.cn"
             },
             "Effect": "Allow",
             "Sid": ""

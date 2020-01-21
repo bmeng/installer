@@ -105,6 +105,8 @@ func (c *awsClient) TagUser(input *iam.TagUserInput) (*iam.TagUserOutput, error)
 func NewClient(accessKeyID, secretAccessKey []byte, infraName string) (Client, error) {
 	awsConfig := &awssdk.Config{}
 
+	region := "cn-north-1"
+	awsConfig.Region = &region
 	awsConfig.Credentials = credentials.NewStaticCredentials(
 		string(accessKeyID), string(secretAccessKey), "")
 

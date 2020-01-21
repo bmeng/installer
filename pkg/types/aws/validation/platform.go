@@ -22,7 +22,7 @@ var (
 		"ap-southeast-2": "Sydney",
 		"ca-central-1":   "Central",
 		//"cn-north-1":     "Beijing",
-		//"cn-northwest-1": "Ningxia",
+		"cn-northwest-1": "Ningxia",
 		"eu-central-1": "Frankfurt",
 		"eu-north-1":   "Stockholm",
 		"eu-west-1":    "Ireland",

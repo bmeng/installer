@@ -18,6 +18,9 @@
         "ca-central-1": {
             "hvm": "ami-04419691da69850cf"
         },
+        "cn-northwest-1": {
+            "hvm": "ami-0ffcfd88e7e2a84ef"
+        },
         "eu-central-1": {
             "hvm": "ami-092b69120ecf915ed"
         },

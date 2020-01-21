@@ -56,7 +56,7 @@ resource "aws_iam_role" "bootstrap" {
         {
             "Action": "sts:AssumeRole",
             "Principal": {
-                "Service": "ec2.amazonaws.com"
+                "Service": "ec2.amazonaws.com.cn"
             },
             "Effect": "Allow",
             "Sid": ""
@@ -100,7 +100,7 @@ resource "aws_iam_role_policy" "bootstrap" {
       "Action" : [
         "s3:GetObject"
       ],
-      "Resource": "arn:aws:s3:::*",
+      "Resource": "arn:aws-cn:s3:::*",
       "Effect": "Allow"
     }
   ]

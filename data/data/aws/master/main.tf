@@ -1,5 +1,5 @@
 locals {
-  arn = "aws"
+  arn = "aws-cn"
 }
 
 resource "aws_iam_instance_profile" "master" {
@@ -19,7 +19,7 @@ resource "aws_iam_role" "master_role" {
         {
             "Action": "sts:AssumeRole",
             "Principal": {
-                "Service": "ec2.amazonaws.com"
+                "Service": "ec2.amazonaws.com.cn"
             },
             "Effect": "Allow",
             "Sid": ""
