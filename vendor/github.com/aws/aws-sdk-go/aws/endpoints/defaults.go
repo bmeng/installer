@@ -2847,6 +2847,19 @@ var awscnPartition = partition{
 				"cn-northwest-1": endpoint{},
 			},
 		},
+		"route53": service{
+			PartitionEndpoint: "aws-cn",
+			IsRegionalized:    boxedFalse,
+
+			Endpoints: endpoints{
+				"aws-cn": endpoint{
+					Hostname: "api.route53.cn",
+					CredentialScope: credentialScope{
+						Region: "cn-northwest-1",
+					},
+				},
+			},
+		},
 		"application-autoscaling": service{
 			Defaults: endpoint{
 				Hostname:  "autoscaling.{region}.amazonaws.com.cn",
