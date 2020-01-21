@@ -9,6 +9,10 @@ locals {
 
 provider "aws" {
   region = var.aws_region
+
+  endpoints {
+    route53 = "api.route53.cn"
+ }
 }
 
 module "bootstrap" {

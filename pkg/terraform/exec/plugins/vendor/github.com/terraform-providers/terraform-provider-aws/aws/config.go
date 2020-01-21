@@ -422,7 +422,7 @@ func (c *Config) Client() (interface{}, error) {
 		pinpointconn:                        pinpoint.New(sess.Copy(&aws.Config{Endpoint: aws.String(c.Endpoints["pinpoint"])})),
 		pricingconn:                         pricing.New(sess.Copy(&aws.Config{Endpoint: aws.String(c.Endpoints["pricing"])})),
 		quicksightconn:                      quicksight.New(sess.Copy(&aws.Config{Endpoint: aws.String(c.Endpoints["quicksight"])})),
-		r53conn:                             route53.New(sess.Copy(&aws.Config{Region: aws.String("us-east-1"), Endpoint: aws.String(c.Endpoints["route53"])})),
+		r53conn:                             route53.New(sess.Copy(&aws.Config{Region: aws.String("cn-northwest-1"), Endpoint: aws.String(c.Endpoints["route53"])})),
 		ramconn:                             ram.New(sess.Copy(&aws.Config{Endpoint: aws.String(c.Endpoints["ram"])})),
 		rdsconn:                             rds.New(sess.Copy(&aws.Config{Endpoint: aws.String(c.Endpoints["rds"])})),
 		redshiftconn:                        redshift.New(sess.Copy(&aws.Config{Endpoint: aws.String(c.Endpoints["redshift"])})),
@@ -460,7 +460,7 @@ func (c *Config) Client() (interface{}, error) {
 		client.kinesisanalyticsconn = kinesisanalytics.New(sess.Copy(&aws.Config{Endpoint: aws.String(c.Endpoints["kinesis_analytics"])}))
 	}
 	if c.Endpoints["r53"] != "" {
-		client.r53conn = route53.New(sess.Copy(&aws.Config{Region: aws.String("us-east-1"), Endpoint: aws.String(c.Endpoints["r53"])}))
+		client.r53conn = route53.New(sess.Copy(&aws.Config{Region: aws.String("cn-northwest-1"), Endpoint: aws.String(c.Endpoints["r53"])}))
 	}
 
 	// Workaround for https://github.com/aws/aws-sdk-go/issues/1376
